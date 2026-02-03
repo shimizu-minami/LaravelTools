@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           # ロリポップ側の公開ディレクトリを指定（例: /web/）
-          server-dir: /web/tools/LaravelTools/
+          server-dir: /tools/LaravelTools/
           # 除外するファイル（Laravelの場合、node_modulesなどは不要）
           exclude: |
             **/.git*
