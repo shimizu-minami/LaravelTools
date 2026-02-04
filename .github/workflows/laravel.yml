@@ -12,18 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          # ロリポップ側の公開ディレクトリを指定（例: /web/）
-          server-dir: /tools/LaravelTools/
-          # 除外するファイル（Laravelの場合、node_modulesなどは不要）
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/tests/**
-            .env
+     # - name: FTP Deploy
+     #   uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+     #   with:
+     #    server: ${{ secrets.FTP_SERVER }}
+     #     username: ${{ secrets.FTP_USERNAME }}
+     #     password: ${{ secrets.FTP_PASSWORD }}
+     #     # ロリポップ側の公開ディレクトリを指定（例: /web/）
+     #     server-dir: /tools/LaravelTools/
+     #     # 除外するファイル（Laravelの場合、node_modulesなどは不要）
+     #     exclude: |
+     #       **/.git*
+     #       **/.git*/**
+     #       **/node_modules/**
+     #       **/tests/**
+     #       .env
